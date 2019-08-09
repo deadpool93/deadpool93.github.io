@@ -1,0 +1,178 @@
+header, footer {
+	display:none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-width: 360px;
+    height: 100vh;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: rgba(55, 55, 55, 0.698);
+    
+}
+.wrapper{
+    max-width: 100%;
+    background-image: url('http://pavelkazakov.ru/wp-content/themes/blankslate/img/myweb.png');
+    background-position: right bottom; 
+    background-repeat: no-repeat;
+    background-size: 35% auto;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+h1{
+    font-size: 3.8em;
+    font-weight: bold;
+    line-height: 12vh;
+    color: rgba(254, 254, 254, 0.8);
+    margin: 13% 10vh;
+}
+.cheader{
+    width: 100%;
+    flex-grow: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+    flex-wrap: nowrap;
+}
+nav{
+    width: 40%;
+    font-size: 1.5em;
+    flex-grow: 0;
+    z-index: 10;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+    flex-wrap: nowrap;
+}
+nav a{
+    min-width: 100px;
+    text-decoration: none;
+    font-size: .75em;
+    color: aliceblue;
+    margin-right: 5%;
+}
+a{
+    z-index: 10;
+}
+#logo{
+    flex-grow: 0;
+    width: 100px;
+}
+.social{
+    width: 20vh;
+    height: 20vh;
+    display: flex;
+    position: absolute;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 10vh;
+    bottom: 0;
+	opacity:0.3;
+}
+.social img{
+    width: 6vh;
+    z-index: 10;
+}
+
+.greensurface{
+    position: fixed;
+    top: 0;
+    left: 56%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 245, 12, 0.36);
+    z-index: 3;
+}
+.grayRect{
+    position: absolute;
+    width: 18vh;
+    height: 20vh;
+    border: 1.5vh solid rgb(98, 98, 98);
+    border-top:0;
+    transition-property: top;
+    transition: 1s;
+    margin-left: 40%;
+    top: -50%;
+    z-index: 10;
+}
+body:hover .grayRect{
+	top:0;
+}
+.greenRect{
+    width: 38vw;
+    height: 15vh;
+    position: absolute;
+    border: 1.5vh solid rgb(96, 169, 106);
+    border-left: 0;
+    transition-property: left;
+    transition: 1s;
+    left: -45%;
+		top:55%;
+    z-index: 10;
+    padding: 5vh 2vh;
+    font-size: 1.5em;
+    text-align: center;
+    color: aliceblue;
+}
+
+.greenRect:hover{
+    border-color: rgb(62, 183, 87);
+}
+body:hover .greenRect{
+		left:0;
+}
+@media (min-width: 1800px){
+    nav a{
+        font-size: 1em;
+    }
+    h1{
+        font-size: 4.5em;
+    }
+    .wrapper{
+        background-size: 40% auto;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .wrapper{
+        background-size: 40% auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    nav{
+        width: 60%;
+    }
+    .grayRect{
+        display: none;
+    }
+    .greensurface{
+        left: 30%;
+    }
+    .wrapper{
+        background-size: 70% auto;
+    }
+}
+@media (max-width: 767pt) {
+    nav{
+        width: 90%;
+    }
+    .greensurface{
+        left: 0%;
+    }
+    .grayRect{
+        display: none;
+    }
+    .greenRect{
+        display: none;
+    }
+    .wrapper{
+        background-size: 400px auto;
+    }
+}
